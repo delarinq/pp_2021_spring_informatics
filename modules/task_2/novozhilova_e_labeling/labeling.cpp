@@ -35,7 +35,7 @@ int check_for_par(std::vector<std::vector<int>> lab, int rows, int cols) {
         for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             if (lab[i][j] != 0) {
-                if (nums.size() == 0) {
+                if (nums.empty()) {
                     nums.push_back(lab[i][j]);
                 } else {
                     bool clicker = true;
@@ -63,7 +63,7 @@ int check_for_seq(std::vector<std::vector<int>> lab, int rows, int cols) {
     for (int i = 0; i < rows; i++) {
     for (int j = 0; j < cols; j++) {
         if (lab[i][j] != 0) {
-            if (nums.size() == 0) {
+            if (nums.empty()) {
                 nums.push_back(lab[i][j]);
             } else {
                 bool clicker = true;
