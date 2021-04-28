@@ -1,4 +1,5 @@
-// Copyright 2021 Novozhilova Ekaterina
+//  Copyright 2021 Novozhilova Ekaterina
+
 #include <gtest/gtest.h>
 #include <omp.h>
 #include <vector>

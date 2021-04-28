@@ -1,4 +1,5 @@
-﻿// Copyright 2021 Novozhilova Ekaterina
+﻿//  Copyright 2021 Novozhilova Ekaterina
+
 #include <omp.h>
 #include <vector>
 #include <algorithm>
@@ -113,8 +114,8 @@ std::vector<std::vector<int>> myrand(int rows, int cols, int bl_pix_quant) {
         }
     }
     int k = 0;
-    for(int i = 0; i < rows; i++) {
-        for(int j = 0; j < cols; j++) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
             pic[i][j] = vec[k];
             k++;
         }
@@ -133,8 +134,7 @@ std::vector<std::vector<int>> SeqLabeling(std::vector<std::vector<int>> arr, int
         label = 1;
         if ((arr[1][0] == 1) && (arr[0][1] == 1)) {
             lab[0][0] = lab[1][0] = lab[0][1] = 1;
-        }
-        else if ((arr[1][0] == 1) || (arr[0][1] == 1)) {
+        } else if ((arr[1][0] == 1) || (arr[0][1] == 1)) {
             if (arr[1][0] != 1) {
                 lab[0][0] = lab[0][1] = 1;
             } else {
@@ -333,7 +333,7 @@ std::vector<std::vector<int>> ParLabeling(std::vector<std::vector<int>> arr, int
         }
     }
     #pragma omp barrier
-    #pragma omp for schedule(static, chunk1) 
+    #pragma omp for schedule(static, chunk1)
         for (int i = 1; i < rows; i += 2) {
             for (int j = 0; j < cols; j++) {
                 if (arr[i][j] != 0) {
@@ -371,7 +371,7 @@ std::vector<std::vector<int>> ParLabeling(std::vector<std::vector<int>> arr, int
             }
         }
     }
-    
+
     bool rep = true;
     while (rep) {
         #pragma omp parallel
