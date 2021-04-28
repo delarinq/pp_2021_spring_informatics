@@ -96,7 +96,6 @@ TEST(Labeling_OpenMP, Test_300x900) {
     ASSERT_TRUE(check_passed);
 }
 
-
 TEST(Labeling_OpenMP, Test_400x600) {
     int rows = 400;
     int cols = 600;

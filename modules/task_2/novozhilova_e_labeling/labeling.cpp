@@ -246,6 +246,7 @@ std::vector<std::vector<int>> SeqLabeling(std::vector<std::vector<int>> arr, int
     }
     return lab;
 }
+
 std::vector<std::vector<int>> ParLabeling(std::vector<std::vector<int>> arr, int rows, int cols) {
     std::vector<std::vector<int>> lab;
     lab.resize(rows);
