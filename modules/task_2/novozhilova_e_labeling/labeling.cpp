@@ -1,5 +1,4 @@
-﻿//  Copyright 2021 Novozhilova Ekaterina
-
+﻿// Copyright 2021 Novozhilova Ekaterina
 #include <omp.h>
 #include <vector>
 #include <algorithm>

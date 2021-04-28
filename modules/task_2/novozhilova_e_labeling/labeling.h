@@ -1,5 +1,4 @@
-//  Copyright 2021 Novozhilova Ekaterina
-
+// Copyright 2021 Novozhilova Ekaterina
 #ifndef MODULES_TASK_2_NOVOZHILOVA_E_LABELING_LABELING_H_
 #define MODULES_TASK_2_NOVOZHILOVA_E_LABELING_LABELING_H_
 
