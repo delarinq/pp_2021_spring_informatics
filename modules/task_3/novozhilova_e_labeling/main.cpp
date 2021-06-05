@@ -143,33 +143,6 @@ TEST(Labeling_TBB, Test_55x85) {
     ASSERT_TRUE(check_passed);
 }
 
-TEST(Labeling_TBB, Test_500x535) {
-    int rows = 500;
-    int cols = 535;
-    std::vector<std::vector<int>> arr = myrand(rows, cols, 133000);
-    std::vector<std::vector<int>> res;
-    std::vector<std::vector<int>> expected;
-    int n_size_seq = 0;
-    int n_size_par = 0;
-    tbb::tick_count t1 = tbb::tick_count::now();
-    res = ParLabeling(arr, rows, cols);
-    tbb::tick_count t2 = tbb::tick_count::now();
-    n_size_par = check_for_par(res, rows, cols);
-
-    tbb::tick_count t3 = tbb::tick_count::now();
-    expected = SeqLabeling(arr, rows, cols);
-    tbb::tick_count t4 = tbb::tick_count::now();
-    n_size_seq = check_for_seq(expected, rows, cols);
-    printf("\tparallel time %f\n", (t2 - t1).seconds());
-    printf("\tsequential time %f\n", (t4 - t3).seconds());
-    bool check_passed = false;
-    if ((n_size_par == n_size_seq) && (n_size_par != 0)) {
-        check_passed = true;
-    }
-
-    ASSERT_TRUE(check_passed);
-}
-
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
