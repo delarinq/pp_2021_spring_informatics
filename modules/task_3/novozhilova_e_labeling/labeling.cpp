@@ -1,5 +1,4 @@
 ﻿  //  Copyright 2021 Novozhilova Ekaterina
-
 #define NOMINMAX
 #include <tbb/tbb.h>
 #include <vector>

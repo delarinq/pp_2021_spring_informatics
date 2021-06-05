@@ -115,7 +115,6 @@ TEST(Labeling_TBB, Test_300x300) {
 
     ASSERT_TRUE(check_passed);
 }
-
 TEST(Labeling_TBB, Test_55x85) {
     int rows = 55;
     int cols = 85;
